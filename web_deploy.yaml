@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nashussawebapp
+  name: nashussawebapp
+  namespace: nashussa-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nashussawebapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nashussawebapp
+    spec:
+      containers:
+      - image: wordpress
+        name: wordpress
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
