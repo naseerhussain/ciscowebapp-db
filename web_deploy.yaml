@@ -12,10 +12,10 @@ spec:
     matchLabels:
       app: nashussawebapp
   strategy: {}
-  template:
+  template: # pod info 
     metadata:
       creationTimestamp: null
-      labels:
+      labels: # label of pods
         app: nashussawebapp
     spec:
       containers:
@@ -23,5 +23,15 @@ spec:
         name: wordpress
         ports:
         - containerPort: 80
+        envFrom: # calling docker image env variables 
+        - configMapRef:
+           name: nashussaweb-config 
+        env: # to call password from secret 
+        - name: WORDPRESS_DB_PASSWORD
+          valueFrom: # taking data from secret 
+           secretKeyRef:
+            name: nashussadb-sec
+            key: db_pass 
+
         resources: {}
 status: {}
