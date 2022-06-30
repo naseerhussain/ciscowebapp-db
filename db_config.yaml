@@ -5,5 +5,5 @@ data:
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: web-config
+  name: db-config
   namespace: nashussa-project
