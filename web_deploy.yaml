@@ -25,7 +25,7 @@ spec:
         - containerPort: 80
         envFrom: # calling docker image env variables 
         - configMapRef:
-           name: web-config 
+           name: nashussaweb-config 
         env: # to call password from secret 
         - name: WORDPRESS_DB_PASSWORD
           valueFrom: # taking data from secret 
