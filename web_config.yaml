@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  MYSQL_DATABASE: nashussadb
+  MYSQL_USER: nashussauser
+  WORDPRESS_DB_USER: nashussauser
+  WORDPRESS_DB_HOST: nashussadblb
+  WORDPRESS_DB_NAME: nashussadb
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: nashussa-config
+  namespace: nashussa-project
