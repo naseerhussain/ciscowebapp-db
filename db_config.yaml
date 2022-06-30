@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  MYSQL_DATABASE: nashussadb
+  MYSQL_USER: nashussauser
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: nashussa-config
+  namespace: nashussa-project
