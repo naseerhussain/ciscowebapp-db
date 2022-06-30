@@ -13,7 +13,7 @@ spec:
     protocol: TCP
     targetPort: 3306
   selector:
-    app: nashussadblb
+    app: nashussadb
   type: ClusterIP
 status:
   loadBalancer: {}
