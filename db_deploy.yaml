@@ -30,12 +30,12 @@ spec:
         - containerPort: 3306
         envFrom: # to call env variable from configMAP
         - configMapRef:
-           name: nashussadb-config # name of configMAP
+           name: db-config # name of configMAP
         env: # calling other env with secret
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: nashussadb-sec
+              name: db-secret
               key: db_pass
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
